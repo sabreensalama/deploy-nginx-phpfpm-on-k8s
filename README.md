@@ -1,8 +1,8 @@
 # deploy-nginx-phpfpm-on-k8s
 
-1) Create a service to expose this app, the service type must be NodePort, nodePort should be 30012.
+1. Create a service to expose this app, the service type must be NodePort, nodePort should be 30012.
 
-2.) Create a config map nginx-config for nginx.conf as we want to add some custom settings for nginx.conf.
+2 Create a config map nginx-config for nginx.conf as we want to add some custom settings for nginx.conf.
 
     a) Change default port 80 to 8097 in nginx.conf.
 
@@ -10,7 +10,7 @@
 
     c) Update directory index to index index.html index.htm index.php in nginx.conf.
 
-3.) Create a pod named nginx-phpfpm .
+3. Create a pod named nginx-phpfpm .
 
     b) Create a shared volume shared-files that will be used by both containers (nginx and phpfpm) also it should be a emptyDir volume.
 
